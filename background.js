@@ -4,7 +4,7 @@ chrome.browserAction.onClicked.addListener(function() {
 		active: true
 	}, function(tab) {
 		chrome.tabs.create({
-			"url": "https://dudu.zhihu.com/post?url="+tab[0].url+"&utm_source=opera-extension&utm_medium=button&utm_campaign=post"
+			"url": "https://dudu.zhihu.com/post?url="+encodeURIComponent(tab[0].url)+"&utm_source=opera-extension&utm_medium=button&utm_campaign=post"
 		});
 	});
 });
